@@ -14,6 +14,7 @@ const BlogForm = (props) => {
             <input type="text" name="title"></input>
             <input type="file" name="blogPicture"></input>
             <input type="text" name="text" />
+            <input type="text" name="name" />
             <input type="submit" value="Send" />
         </form>
     );

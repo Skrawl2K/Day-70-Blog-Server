@@ -26,8 +26,8 @@ app.post('/newPost', upload.single('blogPicture'), (req, res) => {
     const post = {
         title: req.body.title,
         text: req.body.text,
-        picture: req.file.path
-
+        picture: req.file.path,
+        name: req.body.text
     };
     posts.push(post);
 })
