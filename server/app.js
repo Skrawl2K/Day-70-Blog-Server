@@ -16,20 +16,21 @@ const upload = multer({ dest: './public' });
 //! APP.USE
 app.use(morgan('dev')); // -> every request will be shown in dev format
 app.use(cors());
-app.use('./public', express.static('./public'));
+app.use('/public', express.static('./public'));
 
 
 
 //! APP.POST
-app.post('/newPost', upload.single('blogPicture'), (req, res) => {
+app.post('/newPost', upload.single('BlogPicture'), (req, res) => {
     console.log("Body", req.file);
     const post = {
         title: req.body.title,
         text: req.body.text,
         picture: req.file.path,
-        name: req.body.text
+        name: req.body.name
     };
     posts.push(post);
+    res.json(posts);
 })
 
 //! APP.GET

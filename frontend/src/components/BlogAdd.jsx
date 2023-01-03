@@ -11,7 +11,7 @@ const BlogAdd = ({ setPosts }) => {
     const sendData = () => {
         const form = new FormData()
         form.append('title', title)
-        form.append('blogPicture', blogPicture)
+        form.append('BlogPicture', blogPicture)
         form.append('text', text)
         form.append('name', text)
 
@@ -30,7 +30,7 @@ const BlogAdd = ({ setPosts }) => {
             <input type="text" name="title" placeholder="Title" onChange={e => setTitle(e.target.value)} />
             <input type="text" name="text" placeholder="here goes your text" onChange={e => setText(e.target.value)} />
             <div>
-                <input type="file" name="blogPicture" onChange={e => setBlogPicture(e.target.files[0])} />
+                <input type="file" name="BlogPicture" onChange={e => setBlogPicture(e.target.files[0])} />
             </div>
             <input type="text" name="name" placeholder="Username" onChange={e => setText(e.target.value)} />
             <br />

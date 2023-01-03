@@ -18,7 +18,7 @@ const BlogForm = (props) => {
             <BackButton />
             <form onSubmit={sendData}>
                 <input type="text" name="title"></input>
-                <input type="file" name="blogPicture"></input>
+                <input type="file" name="BlogPicture"></input>
                 <input type="text" name="text" />
                 <input type="text" name="name" />
                 <input type="submit" value="Send" />

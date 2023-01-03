@@ -6,7 +6,7 @@ import HomeButton from "../components/HomeButton";
 const BlogDetailPage = () => {
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:9095/BlogListItem')
+        fetch('http://localhost:9095/newPost')
             .then(response => response.json())
             .then(data => setPosts(data))
     }, [])

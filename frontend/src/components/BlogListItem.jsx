@@ -5,11 +5,9 @@ import HomeButton from "./HomeButton";
 const BlogListItem = (props) => {
     return (
         <>
-            <HomeButton />
-            <BackButton />
             <div>
                 <h2>{props.title}</h2>
-                <img src={'http://localhost:9295/${props.picture}'} alt={props.title} />
+                <img src={`http://localhost:9095/${props.picture}`} alt={props.title} />
                 <p>{props.text}</p>
                 <p>{props.name}</p>
                 <Link to={"/BlogDetailPage"} />
