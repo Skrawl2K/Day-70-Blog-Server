@@ -32,6 +32,7 @@ app.post('/newPost', upload.single('blogPicture'), (req, res) => {
     posts.push(post);
 })
 
+//! APP.GET
 app.get('/newPost', (_, res) => {
     res.json(posts);
 })
