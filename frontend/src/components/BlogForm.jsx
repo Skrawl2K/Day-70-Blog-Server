@@ -1,3 +1,6 @@
+import BackButton from "./backButton";
+import HomeButton from "./HomeButton";
+
 const BlogForm = (props) => {
     const sendData = (e) => {
         e.preventDefaul()
@@ -10,13 +13,17 @@ const BlogForm = (props) => {
             .then(data => props.setPosts(data))
     };
     return (
-        <form onSubmit={sendData}>
-            <input type="text" name="title"></input>
-            <input type="file" name="blogPicture"></input>
-            <input type="text" name="text" />
-            <input type="text" name="name" />
-            <input type="submit" value="Send" />
-        </form>
+        <>
+            <HomeButton />
+            <BackButton />
+            <form onSubmit={sendData}>
+                <input type="text" name="title"></input>
+                <input type="file" name="blogPicture"></input>
+                <input type="text" name="text" />
+                <input type="text" name="name" />
+                <input type="submit" value="Send" />
+            </form>
+        </>
     );
 };
 

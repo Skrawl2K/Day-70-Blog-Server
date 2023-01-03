@@ -1,4 +1,6 @@
 import { useState } from "react"
+import BackButton from "./backButton";
+import HomeButton from "./HomeButton";
 
 const BlogAdd = ({ setPosts }) => {
     const [title, setTitle] = useState("")
@@ -22,7 +24,9 @@ const BlogAdd = ({ setPosts }) => {
     };
     return (
         <section>
-            <h2>Add a Blog post</h2>
+            <HomeButton />
+            <BackButton />
+            <h2>Add a blog post</h2>
             <input type="text" name="title" placeholder="Title" onChange={e => setTitle(e.target.value)} />
             <input type="text" name="text" placeholder="here goes your text" onChange={e => setText(e.target.value)} />
             <div>

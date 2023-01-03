@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import BackButton from "../components/backButton";
 import BlogListItem from "../components/BlogListItem";
+import HomeButton from "../components/HomeButton";
 
-const blogDetailPage = () => {
+const BlogDetailPage = () => {
     const [posts, setPosts] = useState([])
     useEffect(() => {
         fetch('http://localhost:9095/BlogListItem')
@@ -10,12 +11,16 @@ const blogDetailPage = () => {
             .then(data => setPosts(data))
     }, [])
     return (
-        <section>
+        <>
+            <HomeButton />
             <BackButton />
-            {posts.map(post =>
-                <BlogListItem title={post.title} picture={post.picture} text={post.text} name={post.name} />)}
-        </section>
+            <section>
+
+                {posts.map(posts =>
+                    <BlogListItem title={posts.title} picture={posts.picture} text={posts.text} name={posts.name} />)}
+            </section>
+        </>
     )
 };
 
-export default blogDetailPage;
+export default BlogDetailPage;
