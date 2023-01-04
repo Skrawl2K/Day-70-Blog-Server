@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import BackButton from "../components/backButton";
 import BlogListItem from "../components/BlogListItem";
+import HeroHeader from "../components/HeroHeader";
 import HomeButton from "../components/HomeButton";
 import OmniNav from "../components/OmniNav";
 
@@ -15,8 +16,9 @@ const BlogDetailPage = () => {
         <>
 
             <div>
+                <HeroHeader />
                 <OmniNav />
-                <section>
+                <section className="posts">
 
                     {posts.map(posts =>
                         <BlogListItem title={posts.title} picture={posts.picture} text={posts.text} name={posts.name} />)}

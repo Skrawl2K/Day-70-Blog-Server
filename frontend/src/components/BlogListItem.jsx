@@ -7,7 +7,7 @@ const BlogListItem = (props) => {
     return (
 
         <>
-            <div>
+            <div className="FormBody">
                 <h2>{props.title}</h2>
                 <img src={`http://localhost:9095/${props.picture}`} alt={props.title} />
                 <p>{props.text}</p>
