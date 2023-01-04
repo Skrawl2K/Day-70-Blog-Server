@@ -1,5 +1,6 @@
 import BackButton from "./backButton";
 import HomeButton from "./HomeButton";
+import OmniNav from "./OmniNav";
 
 const BlogForm = (props) => {
     const sendData = (e) => {
@@ -14,13 +15,12 @@ const BlogForm = (props) => {
     };
     return (
         <>
-            <HomeButton />
-            <BackButton />
+            <OmniNav />
             <form onSubmit={sendData}>
-                <input type="text" name="title"></input>
-                <input type="file" name="BlogPicture"></input>
+                <input type="text" name="title" />
+                <input type="file" name="BlogPicture" />
                 <input type="text" name="text" />
-                <input type="text" name="name" />
+                <input type="name" name="name" />
                 <input type="submit" value="Send" />
             </form>
         </>

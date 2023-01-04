@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import BackButton from "../components/backButton";
 import BlogListItem from "../components/BlogListItem";
 import HomeButton from "../components/HomeButton";
+import OmniNav from "../components/OmniNav";
 
 const BlogDetailPage = () => {
     const [posts, setPosts] = useState([])
@@ -12,13 +13,15 @@ const BlogDetailPage = () => {
     }, [])
     return (
         <>
-            <HomeButton />
-            <BackButton />
-            <section>
 
-                {posts.map(posts =>
-                    <BlogListItem title={posts.title} picture={posts.picture} text={posts.text} name={posts.name} />)}
-            </section>
+            <div>
+                <OmniNav />
+                <section>
+
+                    {posts.map(posts =>
+                        <BlogListItem title={posts.title} picture={posts.picture} text={posts.text} name={posts.name} />)}
+                </section>
+            </div>
         </>
     )
 };

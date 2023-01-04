@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import BackButton from "./backButton";
 import HomeButton from "./HomeButton";
+import OmniNav from "./OmniNav";
 
 const BlogListItem = (props) => {
     return (
+
         <>
             <div>
                 <h2>{props.title}</h2>

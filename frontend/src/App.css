@@ -42,3 +42,11 @@ img {
   width: 25%;
   height: auto;
 }
+
+.OmniNav {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  border: 1px solid #000;
+  background-color: rgb(145, 145, 145);
+}
